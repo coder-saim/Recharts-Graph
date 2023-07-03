@@ -1,18 +1,14 @@
-import ReactDOM from "react-dom";
-import React from "react";
 import {
   LineChart,
   Line,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
 interface DataPoint {
-  name: string; 
+  name: string;
   val: number;
 }
 
@@ -71,36 +67,51 @@ const data = [
   },
 ];
 
+function CustomizedAxisTick(props: any) {
+  const { x, y, stroke, payload } = props;
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <text
+        x={0}
+        y={0}
+        dy={16}
+        textAnchor="end"
+        fill="#666"
+        transform="rotate(-90)"
+      >
+        {payload.value}
+      </text>
+    </g>
+  );
+}
+
 function CustomLineChart({ lines }: CustomLineChartProps) {
   return (
-    <ResponsiveContainer width="100%" height={400}>
+    <ResponsiveContainer width="100%" height={500}>
       <LineChart
         width={500}
-        height={300}
-        data={data}
+        height={400}
+        // data={data}
         margin={{
-          top: 5,
+          top: 15,
           right: 30,
           left: 20,
           bottom: 5,
-        }} 
+        }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        {/* <XAxis dataKey="name" height={60} tick={<CustomizedAxisTick />} /> */}
+        <XAxis dataKey="name" allowDuplicatedCategory={false}/>
+        <YAxis yAxisId="left" />
+        <YAxis orientation="right" />
         <Tooltip />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="pv"
-          stroke="#8884d8"
-          activeDot={{ r: 8 }}
-        />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+
+        {lines.map(line => (
+          <Line dataKey="val" data={line.data} stroke={line.color} dot={false} />
+        ))}
+
       </LineChart>
     </ResponsiveContainer>
   );
 }
 
 export default CustomLineChart;
-
