@@ -91,7 +91,6 @@ function CustomLineChart({ lines }: CustomLineChartProps) {
       <LineChart
         width={500}
         height={400}
-        // data={data}
         margin={{
           top: 15,
           right: 30,

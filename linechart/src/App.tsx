@@ -11,19 +11,19 @@ function App() {
       color: "#8B5CF6",
       data: [
         {
-          name: "06/04", //x axis value
+          name: "Tues 06/04", //x axis value
           val: 4000, //y axis value
         },
         {
-          name: "06/03",
+          name: "Mon 06/03",
           val: 3000,
         },
         {
-          name: "06/02",
+          name: "Sun 06/02",
           val: 2000,
         },
         {
-          name: "06/01",
+          name: "Sat 06/01",
           val: 2780,
         },
       ],
@@ -33,19 +33,19 @@ function App() {
       color: "#22C55E",
       data: [
         { 
-          name: "06/04", //x axis value
+          name: "Tues 06/04", //x axis value
           val: 1000, //Y axis value
         },
         {
-          name: "06/03",
+          name: "Mon 06/03",
           val: 3609, 
         },
         {
-          name: "06/02", 
+          name: "Sun 06/02", 
           val: 2405,
         },
         {
-          name: "06/01",
+          name: "Sat 06/01",
           val: 2381,
         },
       ],
