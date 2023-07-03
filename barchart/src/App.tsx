@@ -2,7 +2,7 @@ import "./App.css";
 import CustomBarChart from "./CustomBarChart";
 
 function App() {
-  const chartData = {
+  const chartData1 = {
     chartTitle: "Recall",
     data: [
       {
@@ -66,10 +66,11 @@ function App() {
   };
 
   return (
-    <CustomBarChart
-      data={chartData.data}
-      chartTitle={chartData.chartTitle}
-    ></CustomBarChart>
+    <div className="App">
+      <CustomBarChart data={chartData1.data} chartTitle={chartData1.chartTitle} />
+      <CustomBarChart data={chartData2.data} chartTitle={chartData2.chartTitle} />
+      <CustomBarChart data={chartData3.data} chartTitle={chartData3.chartTitle} />
+    </div>
   );
 }
 

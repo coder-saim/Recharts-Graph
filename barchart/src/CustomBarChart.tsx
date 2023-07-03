@@ -89,40 +89,36 @@ function CustomizedAxisTick(props: any) {
 
 const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
   return (
-    <ResponsiveContainer width="100%" height={600}>
-      <BarChart
-        width={500}
-        height={300}
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20, 
-          bottom: 5,
-        }}
-      >
-        <XAxis
-          dataKey="name"
-          height={70}
-          tick={<CustomizedAxisTick />}
-        />
+    <>
+      <div>
+        <h1 className="App">{chartTitle}</h1>
+        <ResponsiveContainer width="100%" height={600}>
+          <BarChart
+            width={500}
+            height={300}
+            data={data}
+            margin={{
+              top: 5,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <XAxis dataKey="name" height={70} tick={<CustomizedAxisTick />} />
 
-        <YAxis />
+            <YAxis />
 
+            <Tooltip />
 
-          <Tooltip />
-
-        <Bar dataKey="value">
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={entry.color} />
-            ))}
-        </Bar>
-
-       
-
-
-      </BarChart>
-    </ResponsiveContainer>
+            <Bar dataKey="value">
+              {data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={entry.color} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </>
   );
 };
 
