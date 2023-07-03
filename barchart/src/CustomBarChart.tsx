@@ -87,44 +87,6 @@ function CustomizedAxisTick(props: any) {
   );
 }
 
-const getIntroOfPage = (label: any) => {
-  if (label === "Page A") {
-    return "Page A is about men's clothing";
-  }
-  if (label === "Page B") {
-    return "Page B is about women's dress";
-  }
-  if (label === "Page C") {
-    return "Page C is about women's bag";
-  }
-  if (label === "Page D") {
-    return "Page D is about household goods";
-  }
-  if (label === "Page E") {
-    return "Page E is about food";
-  }
-  if (label === "Page F") {
-    return "Page F is about baby food";
-  }
-  return "";
-};
-
-const CustomTooltip = (props: any) => {
-  const { active, payload, label } = props;
-
-  if (active && payload && payload.length) {
-    return (
-      <div className="custom-tooltip">
-        <p className="label">{`${label} : ${payload[0].value}`}</p>
-        <p className="intro">{getIntroOfPage(label)}</p>
-        <p className="desc">Anything you want can be displayed here.</p>
-      </div>
-    );
-  }
-
-  return null;
-};
-
 const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
   return (
     <ResponsiveContainer width="100%" height={600}>
@@ -142,20 +104,23 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
         <XAxis
           dataKey="name"
           height={70}
-          allowDuplicatedCategory={false}
           tick={<CustomizedAxisTick />}
         />
 
         <YAxis />
 
 
-        <Tooltip content={<CustomTooltip />} />
+          <Tooltip />
 
         <Bar dataKey="value">
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={entry.color} />
-          ))}
+            ))}
         </Bar>
+
+       
+
+
       </BarChart>
     </ResponsiveContainer>
   );
