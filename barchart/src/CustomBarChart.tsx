@@ -62,6 +62,7 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
             <YAxis />
 
             <Tooltip
+              cursor={false}
               wrapperStyle={{ width: 100, backgroundColor: "#ffffff" }}
               formatter={function (value) {
                 return `${value}`;
