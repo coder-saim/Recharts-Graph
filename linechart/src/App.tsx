@@ -12,19 +12,19 @@ function App() {
       data: [
         {
           name: "Tues 06/04", //x axis value
-          val: 4000, //y axis value
+          value: 4000, //y axis value
         },
         {
           name: "Mon 06/03",
-          val: 3000,
+          value: 3000,
         },
         {
           name: "Sun 06/02",
-          val: 2000,
+          value: 2000,
         },
         {
           name: "Sat 06/01",
-          val: 2780,
+          value: 3580,
         },
       ],
     },
@@ -34,19 +34,42 @@ function App() {
       data: [
         { 
           name: "Tues 06/04", //x axis value
-          val: 1000, //Y axis value
+          value: 1000, //Y axis value
         },
         {
           name: "Mon 06/03",
-          val: 3609, 
+          value: 3609, 
         },
         {
           name: "Sun 06/02", 
-          val: 2405,
+          value: 2405,
         },
         {
           name: "Sat 06/01",
-          val: 2381,
+          value: 2381,
+        },
+      ],
+    },
+
+    {
+      title: "Random",
+      color: "#435B66",
+      data: [
+        { 
+          name: "Tues 06/04", //x axis value
+          value: 1200, //Y axis value
+        },
+        {
+          name: "Mon 06/03",
+          value:2609, 
+        },
+        {
+          name: "Sun 06/02", 
+          value: 3405,
+        },
+        {
+          name: "Sat 06/01",
+          value: 2845,
         },
       ],
     },
