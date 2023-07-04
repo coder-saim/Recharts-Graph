@@ -29,7 +29,8 @@ function CustomizedAxisTick(props: any) {
       <text
         x={0}
         y={0}
-        dy={16}
+        // dy={5}
+        dx={-10}
         textAnchor="end"
         fill="#666"
         transform="rotate(-90)"
@@ -57,9 +58,9 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
               bottom: 5,
             }}
           >
-            <XAxis dataKey="name" height={70} tick={<CustomizedAxisTick />} />
+            <XAxis tickLine={false} dataKey="name" height={70} tick={<CustomizedAxisTick />} />
 
-            <YAxis domain={[0, 1]} />
+            <YAxis dx={-10} tickLine={false} domain={[0, 1]} />
 
             <Tooltip
               cursor={false}

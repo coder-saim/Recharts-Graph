@@ -39,9 +39,9 @@ function CustomLineChart({ lines }: CustomLineChartProps) {
             }}
           >
             {/* <XAxis dataKey="name" height={60} tick={<CustomizedAxisTick />} /> */}
-            <XAxis dataKey="name" allowDuplicatedCategory={false} />
-            <YAxis yAxisId="left" />
-            <YAxis orientation="right" domain={[0, 4500]} />
+            <XAxis  dy={10} tickLine={false} dataKey="name" allowDuplicatedCategory={false} />
+            <YAxis dx={10} tickLine={false} yAxisId="left" />
+            <YAxis dx={10} tickLine={false} orientation="right" domain={[0, 4500]} />
             <Tooltip />
 
             {lines.map((line) => (
