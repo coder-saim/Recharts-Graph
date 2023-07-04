@@ -55,6 +55,7 @@ function CustomLineChart({ lines }: CustomLineChartProps) {
             ))}
           </LineChart>
         </ResponsiveContainer>
+        <h1 className="text-yellow-500">hello</h1>
       </div>
     </>
   );

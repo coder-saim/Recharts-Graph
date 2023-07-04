@@ -76,6 +76,7 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
             </Bar>
           </BarChart>
         </ResponsiveContainer>
+        <h1 className="text-yellow-500">hello</h1>
       </div>
     </>
   );
