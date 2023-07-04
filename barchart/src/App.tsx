@@ -67,7 +67,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="grid grid-cols-3 m-12">
       <CustomBarChart data={chartData1.data} chartTitle={chartData1.chartTitle} />
       <CustomBarChart data={chartData2.data} chartTitle={chartData2.chartTitle} />
       <CustomBarChart data={chartData3.data} chartTitle={chartData3.chartTitle} />

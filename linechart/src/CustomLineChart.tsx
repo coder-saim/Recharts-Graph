@@ -25,9 +25,9 @@ interface CustomLineChartProps {
 function CustomLineChart({ lines }: CustomLineChartProps) {
   return (
     <>
-      <div>
-        <h1 className="App">Line Graph</h1>
-        <ResponsiveContainer width="100%" height={500}>
+      <div className="m-8">
+        <h1 className="text-center text-3xl">Line Graph</h1>
+        <ResponsiveContainer className= "ml-80" width="60%" height={500}>
           <LineChart
             width={500}
             height={400}
@@ -41,7 +41,7 @@ function CustomLineChart({ lines }: CustomLineChartProps) {
             {/* <XAxis dataKey="name" height={60} tick={<CustomizedAxisTick />} /> */}
             <XAxis dataKey="name" allowDuplicatedCategory={false} />
             <YAxis yAxisId="left" />
-            <YAxis orientation="right" />
+            <YAxis orientation="right" domain={[0, 4500]} />
             <Tooltip />
 
             {lines.map((line) => (
@@ -55,7 +55,6 @@ function CustomLineChart({ lines }: CustomLineChartProps) {
             ))}
           </LineChart>
         </ResponsiveContainer>
-        <h1 className="text-yellow-500">hello</h1>
       </div>
     </>
   );

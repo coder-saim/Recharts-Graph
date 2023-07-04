@@ -44,8 +44,8 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
   return (
     <>
       <div>
-        <h1 className="App">{chartTitle}</h1>
-        <ResponsiveContainer width="100%" height={600}>
+        <h1 className="text-center text-3xl mb-4">{chartTitle}</h1>
+        <ResponsiveContainer width="80%" height={400}>
           <BarChart
             width={500}
             height={300}
@@ -59,7 +59,7 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
           >
             <XAxis dataKey="name" height={70} tick={<CustomizedAxisTick />} />
 
-            <YAxis />
+            <YAxis domain={[0, 1]} />
 
             <Tooltip
               cursor={false}
@@ -76,7 +76,6 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
             </Bar>
           </BarChart>
         </ResponsiveContainer>
-        <h1 className="text-yellow-500">hello</h1>
       </div>
     </>
   );
