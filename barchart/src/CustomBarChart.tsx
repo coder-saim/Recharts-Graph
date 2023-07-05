@@ -7,6 +7,7 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
+  Rectangle,
 } from "recharts";
 
 interface DataPoint {
@@ -45,8 +46,8 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
   return (
     <>
       <div>
-        <h1 className="text-center text-3xl mb-4">{chartTitle}</h1>
-        <ResponsiveContainer width="80%" height={400}>
+        <h1 className="text-center text-2xl mb-4">{chartTitle}</h1>
+        <ResponsiveContainer width="70%" height={400}>
           <BarChart
             width={500}
             height={300}
@@ -58,10 +59,17 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
               bottom: 5,
             }}
           >
-            <XAxis tickLine={false} dataKey="name" height={70} tick={<CustomizedAxisTick />} />
+            <XAxis
+              axisLine={true}
+              tickLine={false}
+              dataKey="name"
+              height={70}
+              tick={<CustomizedAxisTick />}
+            />
 
-            <YAxis dx={-10} tickLine={false} domain={[0, 1]} />
+            {/* <rect height={325} width={355} stroke="#000" fill="none" /> */}
 
+            <YAxis axisLine={false} dx={-10} tickLine={false} domain={[0, 1]} />
             <Tooltip
               cursor={false}
               wrapperStyle={{ width: 100, backgroundColor: "#ffffff" }}
