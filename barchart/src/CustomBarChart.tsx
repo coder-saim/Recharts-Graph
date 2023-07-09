@@ -69,7 +69,7 @@ const CustomBarChart = ({ chartTitle, data }: CustomBarChartProps) => {
 
             {/* <rect height={325} width={355} stroke="#000" fill="none" /> */}
 
-            <YAxis axisLine={false} dx={-10} tickLine={false} domain={[0, 1]} />
+            <YAxis axisLine={true} dx={-10} tickLine={false} domain={[0, 1]} />
             <Tooltip
               cursor={false}
               wrapperStyle={{ width: 100, backgroundColor: "#ffffff" }}

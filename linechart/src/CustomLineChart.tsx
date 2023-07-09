@@ -11,8 +11,8 @@ import {
 } from "recharts";
 
 interface DataPoint {
-  name: string;
-  value: number;
+  name?: string;
+  value?: number;
 }
 
 interface LineData {
@@ -29,7 +29,7 @@ function CustomLineChart({ lines }: CustomLineChartProps) {
   return (
     <>
       <div className="m-8">
-        <h1 className="text-center text-3xl">Line Graph</h1>
+        <h1 className="text-center pb-4 text-3xl">Line Graph</h1>
         <ResponsiveContainer className="ml-80" width="60%" height={500}>
           <LineChart
             width={919}
