@@ -57,7 +57,7 @@ function CustomLineChart({ lines }: CustomLineChartProps) {
               orientation="right"
               domain={[0, 4500]}
             />
-            <Tooltip />
+            <Tooltip /> 
             {lines.map((line) => (
               <Line
                 key={line.title}
