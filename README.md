@@ -24,3 +24,6 @@ In the project directory, you can run:
 
 ## **Official Documentaton**
 [Recharts Docs](https://recharts.org/en-US)
+
+<!-- Use this one to run code... -->
+"react-scripts": "^0.0.0",
